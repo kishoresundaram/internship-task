@@ -1,0 +1,6 @@
+CompanyID,Company,Role,RequiredSkills,MinExperience
+1,TCS,GenAI Developer,"Python,LLM,LangChain,RAG,Docker",2
+2,Infosys,Backend Developer,"Java,Spring Boot,Microservices",2
+3,Wipro,Frontend Developer,"React,Node.js,MongoDB",1
+4,Accenture,Data Analyst,"SQL,Power BI,Data Analysis",2
+5,Cognizant,DevOps Engineer,"Docker,Kubernetes,AWS",2
