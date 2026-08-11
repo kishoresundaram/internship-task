@@ -1,0 +1,22 @@
+                                      PHYTHON   TEST  
+									  
+									 
+AI Engineer
+
+Required Skills:
+Python
+Generative AI
+Machine Learning
+FastAPI
+SQL
+Git
+
+Responsibilities:
+Develop AI applications.
+Build REST APIs.
+Work with machine learning models.
+
+Experience:
+0-2 years.
+
+
