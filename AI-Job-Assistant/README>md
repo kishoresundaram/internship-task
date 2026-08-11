@@ -1,0 +1,350 @@
+# 🤖 AI Job Assistant
+
+An AI-powered career assistant built with **FastAPI, Streamlit, Google Gemini, RAG, ChromaDB, and persistent memory**.
+
+The application helps users interact with an AI career assistant, upload Job Descriptions, ask questions about them using Retrieval-Augmented Generation (RAG), and interact with the assistant through chat and voice.
+
+---
+
+## 🚀 Features
+
+### 🔐 Authentication
+
+* User registration
+* User login
+* JWT-based authentication
+* Protected API endpoints
+
+### 💬 AI Chat
+
+* General-purpose AI career assistant
+* Powered by Google Gemini
+* Conversational question answering
+
+### 📄 Job Description Analyzer
+
+* Upload Job Description files
+* Extract text from documents
+* Split documents into chunks
+* Generate embeddings
+* Store vectors using ChromaDB
+* Ask questions about the uploaded Job Description
+
+### 🧠 AI Memory
+
+* Maintains conversational context
+* Stores useful user information
+* Enables personalized responses
+
+### 🎤 Voice Assistant
+
+* Speech-to-Text
+* AI response generation
+* Text-to-Speech
+* Voice assistant API
+
+### 🌐 REST API
+
+Backend APIs are developed using FastAPI with automatic Swagger documentation.
+
+---
+
+## 🏗️ System Architecture
+
+```text
+                    ┌─────────────────────┐
+                    │    Streamlit UI     │
+                    │      Frontend       │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │      FastAPI        │
+                    │      Backend        │
+                    └──────────┬──────────┘
+                               │
+             ┌─────────────────┼─────────────────┐
+             ▼                 ▼                 ▼
+       Authentication       AI Chat             RAG
+             │                 │                 │
+             ▼                 ▼                 ▼
+          Database          Gemini          ChromaDB
+                                                 │
+                                                 ▼
+                                           JD Embeddings
+
+                         Voice Pipeline
+                               │
+                    Speech → Text → Gemini
+                               │
+                         Text → Speech
+```
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology     | Purpose                   |
+| -------------- | ------------------------- |
+| Python         | Core programming language |
+| FastAPI        | Backend REST API          |
+| Streamlit      | Frontend interface        |
+| Google Gemini  | Generative AI             |
+| LangChain      | LLM integration           |
+| ChromaDB       | Vector database           |
+| JWT            | Authentication            |
+| SQL Database   | User/data persistence     |
+| Speech-to-Text | Voice input               |
+| Text-to-Speech | Voice output              |
+| Git & GitHub   | Version control           |
+
+---
+
+## 📁 Project Structure
+
+```text
+AI-Job-Assistant/
+│
+├── app/
+│   ├── api/
+│   ├── database/
+│   ├── modules/
+│   ├── utils/
+│   ├── config.py
+│   └── main.py
+│
+├── frontend/
+│   └── app.py
+│
+├── data/
+├── tests/
+├── .env
+├── .gitignore
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/AI-Job-Assistant.git
+```
+
+```bash
+cd AI-Job-Assistant
+```
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+### 3. Activate the virtual environment
+
+### Windows
+
+```bash
+venv\Scripts\activate
+```
+
+### 4. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Configure environment variables
+
+Create a `.env` file:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key
+GEMINI_MODEL=your_model_name
+SECRET_KEY=your_secret_key
+```
+
+Never upload your real `.env` file to GitHub.
+
+---
+
+## ▶️ Running the Backend
+
+Start the FastAPI server:
+
+```bash
+uvicorn app.main:app --reload
+```
+
+The API will be available at:
+
+```text
+http://127.0.0.1:8000
+```
+
+Swagger API documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+---
+
+## ▶️ Running the Frontend
+
+Open another terminal and activate the virtual environment.
+
+Then run:
+
+```bash
+streamlit run frontend/app.py
+```
+
+The Streamlit application will open in your browser.
+
+---
+
+## 📄 RAG Workflow
+
+The Job Description Analyzer follows this pipeline:
+
+```text
+Job Description PDF
+        ↓
+Text Extraction
+        ↓
+Text Chunking
+        ↓
+Embeddings
+        ↓
+ChromaDB
+        ↓
+Similarity Search
+        ↓
+Relevant JD Context
+        ↓
+Google Gemini
+        ↓
+AI Answer
+```
+
+The system is designed to answer questions based on the uploaded Job Description instead of blindly generating unrelated information.
+
+---
+
+## 🔑 API Endpoints
+
+### Authentication
+
+```text
+POST /auth/register
+POST /auth/login
+```
+
+### Chat
+
+```text
+POST /chat
+```
+
+### Job Description
+
+```text
+POST /documents/upload-jd
+```
+
+### RAG
+
+```text
+POST /rag/ask
+```
+
+### Voice
+
+```text
+POST /voice/stt
+POST /voice/tts
+POST /voice/assistant
+```
+
+### Health Check
+
+```text
+GET /
+```
+
+---
+
+## 🧪 Example RAG Question
+
+After uploading a Job Description:
+
+```text
+What skills are required for this job?
+```
+
+Example response:
+
+```text
+Python
+Generative AI
+Machine Learning
+FastAPI
+SQL
+Git
+```
+
+---
+
+## 🎯 Project Goals
+
+The main goals of this project are:
+
+* Build a practical Generative AI application
+* Implement Retrieval-Augmented Generation
+* Integrate vector search with an LLM
+* Build secure REST APIs
+* Implement user authentication
+* Add conversational memory
+* Provide a user-friendly frontend
+* Explore voice-based AI interaction
+
+---
+
+## 🔮 Future Improvements
+
+* Resume upload and analysis
+* Resume vs Job Description matching
+* Skill gap analysis
+* Job recommendation system
+* Interview preparation mode
+* Voice assistant improvements
+* Cloud deployment
+* Advanced conversation history
+* Automated test coverage
+
+---
+
+## 👨‍💻 Author
+
+**Kishore S**
+
+B.Tech Computer Science & Engineering
+
+Interested in:
+
+* Generative AI
+* Machine Learning
+* Python
+* Backend Development
+* AI Applications
+
+---
+
+## ⭐ If you find this project useful
+
+Feel free to explore the repository, raise issues, and suggest improvements.
