@@ -1,0 +1,52 @@
+# Python
+
+**pycache**/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+
+venv/
+.venv/
+env/
+
+# Environment variables
+
+.env
+.env.*
+
+# Databases
+
+*.db
+*.sqlite
+*.sqlite3
+
+# Vector databases
+
+chroma_db/
+chroma/
+data/chroma/
+
+# Generated audio
+
+*.mp3
+*.wav
+
+# Uploaded files
+
+uploads/
+data/uploads/
+
+# IDE
+
+.vscode/
+.idea/
+
+# OS
+
+.DS_Store
+Thumbs.db
+
+# Backup folders
+
+*-BACKUP/

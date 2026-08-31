@@ -1,0 +1,11 @@
+CandidateID,Name,Skills,Experience,Projects,Education,Location
+1,kathick,"Python,FastAPI,LLM,LangChain,RAG,Docker",2,"AI Chatbot","B.Tech CSE","Chennai"
+2,priyanka,"Python,Machine Learning,Docker,SQL",3,"Fraud Detection","B.Tech IT","Bangalore"
+3,Aravind,"Java,Spring Boot,Microservices,Docker",2,"Banking App","B.Tech CSE","Hyderabad"
+4,david,"React,Node.js,MongoDB,JavaScript",1,"Ecommerce Website","BCA","Chennai"
+5,Saranya,"SQL,Power BI,Data Analysis,Excel",4,"Sales Dashboard","MBA Analytics","Mumbai"
+6,Kishore,"Python,GenAI,RAG,Docker,Cyber Security",2,"Medical AI","B.Tech Cyber Security","Chennai"
+7,Rahul,"Java,Spring Boot,AWS,Microservices",3,"Inventory System","B.Tech CSE","Pune"
+8,Anjali,"React,Node.js,MongoDB,Express",2,"Job Portal","B.Tech IT","Bangalore"
+9,Arun,"SQL,Power BI,Tableau,Excel",3,"HR Analytics","MCA","Coimbatore"
+10,Meena,"Docker,Kubernetes,Jenkins,AWS",4,"Cloud Deployment","B.Tech CSE","Hyderabad"

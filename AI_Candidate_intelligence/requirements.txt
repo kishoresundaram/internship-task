@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+pymupdf
+sqlalchemy
+passlib[bcrypt]
+python-jose[cryptography]
+python-dotenv
+scikit-learn
+numpy
