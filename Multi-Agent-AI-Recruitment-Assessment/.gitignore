@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+.coverage
+.vscode/
+.idea/
+
+data/resumes/*
+data/job_descriptions/*
+data/audio/*
+data/video/*
+
+*.log
